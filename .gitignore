@@ -17,3 +17,6 @@
 
 #removing c9 files
 .c9/metadata
+
+# Ignore Spring files.
+/spring/*.pid
