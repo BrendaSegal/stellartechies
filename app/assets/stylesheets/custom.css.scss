@@ -1,7 +1,9 @@
 /*all vars go here*/
 $black: #000;
 $white: #fff;
-$blue: #333388;
+$blue: #0909B9;
+$darker_blue: #070794;
+$yellow: #FFBF00;
 
 /*default settings*/
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}
@@ -13,7 +15,9 @@ blockquote, q {quotes: none;}
 blockquote:before, blockquote:after,q:before, q:after {	content: ''; content: none;}
 table {	border-collapse: collapse;	border-spacing: 0;}
 
-
+.yellow{
+    color: $yellow;
+}
 html{
     font-size:12px;
     color: $black;
@@ -22,6 +26,9 @@ html{
 }
 
 header {
+    .top-header-section{
+        height:50px;
+    }
     .container{
         background-color: $blue;
     }
@@ -29,21 +36,32 @@ header {
         font-size:20px;
         font-weight:bold;
         color: $white;
+        padding: 5px 5px 5px 5px;
+    }
+    .nav-container{
+         background-color: $darker_blue;
+         width: 100%;
     }
     ul{
-        background-color: $blue;
-        list-style-type:none;
-        width:100%;
+        background-color: $darker_blue;
+        list-style-type: none;
+        width: 80%;
+        margin: 0 auto;
         li{
-            float:left;
-            width:33%;
+            float: left;
+            width: 33.3%;
+            text-align:center;
             a{
-                text-decoration:none;
+                text-transform: uppercase;
+                font-size:16px;
+                text-decoration: none;
                 color: $white;
-                display:block;
-                background-color: $blue;
+                display: block;
+                height: 22px;
+                line-height: 22px;
+                background-color: $darker_blue;
                 &:hover{
-                    color:#33ff77;
+                    font-weight:bold;
                 }
             }
         }
