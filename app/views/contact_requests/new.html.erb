@@ -1,0 +1,19 @@
+<% provide(:title, 'Contact Us') %>
+<h1>Contact Us</h1>
+
+<div class="">
+  <div class="">
+    <%= form_for(@cr) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+
+      <%= f.label :message %>
+      <%= f.text_area :message %>
+
+      <%= f.submit "Contact us!", class: "" %>
+    <% end %>
+  </div>
+</div>
