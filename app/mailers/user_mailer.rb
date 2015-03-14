@@ -12,12 +12,7 @@ class UserMailer < ActionMailer::Base
   def contact_us(cr)
     @cr = cr
     admin = "bsegal26+admin@gmail.com"
-    mail to: admin, subject: "#{@cr.email} contacted Stellar Techies"
+    mail to: admin, subject: "#{@cr.email} contacted Stellar Techies", body: "#{@cr.message}"
   end
   
-  #def contact_us
-    #@greeting = "Hi"
-
-    #mail to: "to@example.org"
- # end
 end

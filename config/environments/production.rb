@@ -1,4 +1,16 @@
 Rails.application.configure do
+  
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587,
+    :user_name => "bsegal26@gmail.com",
+    :password  => "Pw4vEekOFDV4weXc2SjLcQ"
+  }
+  
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host: "heroku.com" }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
