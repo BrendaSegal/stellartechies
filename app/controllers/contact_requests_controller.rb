@@ -1,6 +1,6 @@
 class ContactRequestsController < ApplicationController
   
-  def show 
+  def show
     @cr = ContactRequest.find(params[:id])
   end
   
@@ -13,7 +13,7 @@ class ContactRequestsController < ApplicationController
     if @cr.save
       UserMailer.contact_us(@cr).deliver
       flash[:success] = "We have received your request and will respond as soon as possible."
-      redirect_to root_url
+      redirect_to @cr
     else
       render 'new'
     end

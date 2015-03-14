@@ -1,6 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default to: "bsegal26+admin@gmail.com", 
-          from: "bsegal26@gmail.com"
+  default to: "bsegal26+admin@gmail.com", from: "bsegal26@gmail.com"
   #noreply@stellartechies.com
 
   # Subject can be set in your I18n file at config/locales/en.yml

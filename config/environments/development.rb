@@ -1,4 +1,12 @@
 Rails.application.configure do
+  
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587,
+    :user_name => "bsegal26@gmail.com",
+    :password  => "Pw4vEekOFDV4weXc2SjLcQ"
+  }
+  
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -14,9 +22,11 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
-  host = 'https://stellartechies-brendasegal-2.c9.io'
+  host = 'localhost:3000'
+  #localhost:3000
   config.action_mailer.default_url_options = { host: host }
   
   # Print deprecation notices to the Rails logger.
