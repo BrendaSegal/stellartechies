@@ -11,8 +11,9 @@ class UserMailer < ActionMailer::Base
   def contact_us(cr)
     @cr = cr
     @test = "testing"
+    email_with_name = %("#{@cr.name}" <#{@cr.email}>)
     admin = "bsegal26+admin@gmail.com"
-    mail to: admin, subject: "#{@cr.email} contacted Stellar Techies"
+    mail(to: email_with_name, bcc: admin, subject: "Thank you for contacting Stellar Techies.")
   end
   
 end

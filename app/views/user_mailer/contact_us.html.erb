@@ -4,21 +4,17 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-    <h1>Stellar Techies</h1>
+    <h1> Hi <%= @cr.name %>,</h1>
     
     <p>
-      Hi <%= @cr.name %>
+     Thank you for contacting Stellar Techies.  We will respond to you within 1-2 business days.
     </p>
-        also <%= @test %>
+   
+    <p>Here is a copy of the message you sent us for your reference:</p>
     <p>
-        
-    </p>
-    <p>
-        We will respond to your message as soon as possible.
+       <%= @cr.message %>
     </p>
     
-    <p>
-        Message from you: <%= @cr.message %>
-    </p>
+    <p>Have a great day and reach for the stars!</p>
 </body>
 </html>
