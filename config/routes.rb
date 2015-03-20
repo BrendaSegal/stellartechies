@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'home'=>'static_pages#home'
   get 'about'=>'static_pages#about'
   get 'help'=>'static_pages#help'
+  get 'services'=>'static_pages#services'
   get 'contact' => 'contact_requests#new'
   get 'thankyou' => 'contact_requests#thanks'
   
