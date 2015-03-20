@@ -12,6 +12,7 @@ class UserMailer < ActionMailer::Base
     @cr = cr
     admin = "bsegal26+admin@gmail.com"
     mail to: admin, subject: "#{@cr.email} contacted Stellar Techies", body: "#{@cr.message}"
+    mail to: "#{@cr.email}", subject: "Thank you for your emailing Stellar Techies!", body: "Thank you for contacting Stellar Techies.  We will get back to you within 1-2 business days.  Here is a copy of the message you sent us: <br/> #{@cr.message}"
   end
   
 end
