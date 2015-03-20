@@ -12,11 +12,14 @@ class ContactRequestsController < ApplicationController
     @cr = ContactRequest.new(contactrequest_params)
     if @cr.save
       UserMailer.contact_us(@cr).deliver
-      flash[:success] = "We have received your request and will respond as soon as possible."
-      redirect_to @cr
+      flash[:success] = "We have successfully received your contact request."
+      redirect_to thankyou_path
     else
       render 'new'
     end
+  end
+  
+  def thanks
   end
   
   private
