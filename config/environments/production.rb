@@ -3,8 +3,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
     :port      => 587,
-    :user_name => "bsegal26@gmail.com",
-    :password  => "Pw4vEekOFDV4weXc2SjLcQ"
+    :user_name => "app33421421@heroku.com",
+    :password  => "KKJoD6aHFIm6gkMPJasU7Q"
   }
   
   config.action_mailer.perform_deliveries = true
